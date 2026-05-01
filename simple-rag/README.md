@@ -1,4 +1,4 @@
-# Simple RAG
+# Simple 2-Step RAG
 
 A Node.js and TypeScript implementation of a local, two-step Retrieval-Augmented Generation (RAG) pipeline for PDF documents.
 
