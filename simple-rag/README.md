@@ -191,6 +191,8 @@ session1
 
 - Use Redis or another database-backed store for persistent message history.
 - Replace the built-in `RunnableWithMessageHistory` with a custom message storage and update mechanism inside the chain lifecycle.
+- Add rerankers to improve the final ordering of retrieved chunks before generation.
+- Add RAG evaluation, for example with RAGAS, to measure retrieval quality and answer faithfulness.
 
 ## Notes
 
