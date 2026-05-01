@@ -1,0 +1,564 @@
+[
+  {
+    "pageContent": "[SECTION: NON-GAAP FINANCIAL INFORMATION]\nManagement also believes that presentation of the non-GAAP financial measures provides useful information to our investors regarding our financial condition and results of operations, so that investors can see through the eyes of Tesla management\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 6,
+          "to": 6
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "NON-GAAP FINANCIAL INFORMATION",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: A I   &   S O F T W A R E]\nprovides safety and convenience functionality that can relieve drivers of many tedious and \npotentially dangerous aspects of road travel, including giving access to personal transport for \nthose who otherwise have difficulty driving. V14 offers unparalleled driver assistance to safely \ndrive to the customer’s destination, find a free parking spot and park at that location. Our global\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 10,
+        "lines": {
+          "from": 12,
+          "to": 15
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "A I   &   S O F T W A R E",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: NON-GAAP FINANCIAL INFORMATION]\nother companies. Management believes that it is useful to supplement its GAAP financial statements with this non-GAAP information because management uses such information internally for its operating, budgeting and financial planning purposes.\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 5,
+          "to": 5
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "NON-GAAP FINANCIAL INFORMATION",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: CERTAIN\n TERMS]\nCERTAIN\n TERMS\nWhen used in this update, certain terms have the following meanings. Our vehicle deliveries include only vehicles that have been transferred to end customers with all paperwork correctly completed. Our energy product deployment volume includes\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 1,
+          "to": 3
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "CERTAIN\n TERMS",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: NON-GAAP FINANCIAL INFORMATION]\nregarding important financial metrics that Tesla uses to run the business and allowing investors to better understand Tesla’s performance. Non-GAAP information is not prepared under a comprehensive set of accounting rules and therefore, should only\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 7,
+          "to": 7
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "NON-GAAP FINANCIAL INFORMATION",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: F I N A N C I A L     S T A T E M E N T S]\nF I N A N C I A L     S T A T E M E N T S",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 27
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "F I N A N C I A L     S T A T E M E N T S",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: FORWARD-LOOKING STATEMENTS]\nlimitation, could cause actual results to differ materially from those in the forward-looking statements: the risk of delays in launching and/or manufacturing our products, services and features cost-effectively; our ability to build and/or grow our products\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 6,
+          "to": 6
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "FORWARD-LOOKING STATEMENTS",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: K E YM E T R I C SY E A R – O V E R – Y E A R   F I N A N C I A L   S U M M A R Y]\nK E YM E T R I C SY E A R – O V E R – Y E A R   F I N A N C I A L   S U M M A R Y",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 26
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "K E YM E T R I C SY E A R – O V E R – Y E A R   F I N A N C I A L   S U M M A R Y",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: FORWARD-LOOKING STATEMENTS]\nconditions; any failures by Tesla products to perform as expected or if product recalls occur; the risk of product liability claims; competition in the automotive, transportation and energy product and services and robotics markets; our ability to maintain\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 11,
+          "to": 11
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "FORWARD-LOOKING STATEMENTS",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  },
+  {
+    "pageContent": "[SECTION: FORWARD-LOOKING STATEMENTS]\nand services, sales, delivery, installation, servicing and charging capabilities and effectively manage this growth; our ability to successfully and timely develop, introduce and scale, as well as our consumers’ demand for, products and services based on\n[END OF SECTION]",
+    "metadata": {
+      "source": "C:\\Users\\prkat\\OneDrive\\Desktop\\Projects\\llm-api-basics\\RAG\\simple-rag\\sources\\TSLA-Q4-2025.pdf",
+      "pdf": {
+        "version": "1.10.100",
+        "info": {
+          "PDFFormatVersion": "1.6",
+          "IsAcroFormPresent": false,
+          "IsXFAPresent": false,
+          "Title": "2025 Q4 Quarterly Update Deck",
+          "Author": "Travis Axelrod",
+          "Creator": "Adobe InDesign 14.0 (Macintosh)",
+          "Producer": "macOS Version 26.2 (Build 25C56) Quartz PDFContext, AppendMode 1.1",
+          "CreationDate": "D:20260128123137-08'00'",
+          "ModDate": "D:20260128203754Z00'00'"
+        },
+        "metadata": {
+          "_metadata": {
+            "xmp:modifydate": "2026-01-28T14:35:20-06:00",
+            "xmp:createdate": "2026-01-28T12:31:37-08:00",
+            "xmp:metadatadate": "2026-01-28T14:35:20-06:00",
+            "xmp:creatortool": "Adobe InDesign 14.0 (Macintosh)",
+            "xmpmm:documentid": "uuid:c68201f1-2305-4888-8523-e7a0259f0d43",
+            "xmpmm:instanceid": "uuid:b55e5776-23de-4764-8ca0-6b1ebb059c1b",
+            "dc:format": "application/pdf",
+            "dc:title": "2025 Q4 Quarterly Update Deck",
+            "dc:creator": "Travis Axelrod",
+            "pdf:producer": "Adobe PDF Library 25.1.119",
+            "pdfx:created": "10/10/2019 7:00:00 PM",
+            "pdfx:lastsaved": "10/11/2019 7:00:00 PM",
+            "pdfx:contenttypeid": "0x010100523F82E28A78DC4F9C1EF98C7DB19E00",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_enabled": "true",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_method": "Standard",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_name": "General",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_siteid": "9026c5f4-86d0-4b9f-bd39-b7d4d0fb4674",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_actionid": "39c75302-6d21-4f50-81e8-000037efece8",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_contentbits": "0",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_tag": "10, 3, 0, 2",
+            "pdfx:msip_label_52d06e56-1756-4005-87f1-1edc72dd4bdf_setdate": "2025-04-21T21:38:53Z"
+          }
+        },
+        "totalPages": 35
+      },
+      "loc": {
+        "pageNumber": 34,
+        "lines": {
+          "from": 7,
+          "to": 7
+        }
+      },
+      "sourceFile": "TSLA-Q4-2025.pdf",
+      "section": "FORWARD-LOOKING STATEMENTS",
+      "context": "TESLA Q4-2025 Earnings Report",
+      "report_type": "Earnings Report"
+    }
+  }
+]
