@@ -53,6 +53,8 @@ PDF files
   -> Local Llama 3.1 answer
 ```
 
+![RAG flow chart](public/flow-chart.png)
+
 ## Project Structure
 
 ```text
