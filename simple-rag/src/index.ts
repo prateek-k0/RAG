@@ -48,11 +48,6 @@ async function main() {
     const sectionAwareChunker = new SectionAwareChunker(400, 100);
     spinner.start("Chunking documents...");
     const chunks = await sectionAwareChunker.chunk(documents, {
-      context: "TESLA Q4-2025 Earnings Report",
-      // year: "2025",
-      // quarter: "Q4",
-      // company: "TESLA",
-      // ticker: "TSLA",
       report_type: "Earnings Report",
     });
     // console.log(chunks.map(chunk => chunk.metadata));

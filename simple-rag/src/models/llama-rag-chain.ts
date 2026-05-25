@@ -1,11 +1,10 @@
 import { ChatOllama } from "@langchain/ollama";
 import { ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from "@langchain/core/prompts";
-import { createStuffDocumentsChain } from "@langchain/classic/chains/combine_documents";
-import { createRetrievalChain } from "@langchain/classic/chains/retrieval";
-
+// import { createStuffDocumentsChain } from "@langchain/classic/chains/combine_documents";
+// import { createRetrievalChain } from "@langchain/classic/chains/retrieval";
+// import { MultiQueryRetriever } from "@langchain/classic/retrievers/multi_query";
 import { BaseRetriever } from "@langchain/core/retrievers";
 import { EnsembleRetriever } from "@langchain/classic/retrievers/ensemble";
-import { MultiQueryRetriever } from "@langchain/classic/retrievers/multi_query";
 import { INPUT_KEY, MESSAGE_HISTORY_KEY } from "../utils/constants";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { RunnableLambda, RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables";
@@ -17,66 +16,66 @@ import 'dotenv/config';
 import { createMemoryHistoryChain } from "../messageStore/createMemoryHistoryChain";
 
 // DEPRECATED: no more black-box built-ins like MultiQueryRetriever
-export async function createLlamaRagChain(retriever: BaseRetriever | EnsembleRetriever) {
-  // 1. Initialize our local Llama 3.1
-  const model = new ChatOllama({
-    model: "llama3.1",
-    temperature: 0,
-    baseUrl: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434",
-    numCtx: 8192, // 8k context window
-    verbose: true,
-  });
+// export async function createLlamaRagChain(retriever: BaseRetriever | EnsembleRetriever) {
+//   // 1. Initialize our local Llama 3.1
+//   const model = new ChatOllama({
+//     model: "llama3.1",
+//     temperature: 0,
+//     baseUrl: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434",
+//     numCtx: 8192, // 8k context window
+//     verbose: true,
+//   });
 
-  // 1.5. Create the Multi Query Retriever
-  // first, set prompt to generate different ways to ask the same thing
-  /*
-    the Standard Setup (and the one most likely to work with Llama 3.1 without errors) is to keep the 
-    variable as {question} inside the MultiQueryRetriever template, while keeping your main chain 
-    input as {input}.
-  */
-  const CUSTOM_MULTI_QUERY_PROMPT = new PromptTemplate({
-    inputVariables: ["question"],
-    template: `You are an AI language model assistant. Your task is to generate 
-    three (3) different versions of the given user question to retrieve relevant 
-    documents from a vector database. By generating multiple perspectives on the 
-    user question, your goal is to help the user overcome some of the limitations 
-    of distance-based similarity search.
+//   // 1.5. Create the Multi Query Retriever
+//   // first, set prompt to generate different ways to ask the same thing
+//   /*
+//     the Standard Setup (and the one most likely to work with Llama 3.1 without errors) is to keep the 
+//     variable as {question} inside the MultiQueryRetriever template, while keeping your main chain 
+//     input as {input}.
+//   */
+//   const CUSTOM_MULTI_QUERY_PROMPT = new PromptTemplate({
+//     inputVariables: ["question"],
+//     template: `You are an AI language model assistant. Your task is to generate 
+//     three (3) different versions of the given user question to retrieve relevant 
+//     documents from a vector database. By generating multiple perspectives on the 
+//     user question, your goal is to help the user overcome some of the limitations 
+//     of distance-based similarity search.
     
-    Provide ONLY the alternative questions, separated by a newline. Do not include introductory text or numbering.
-    Original question: {question}`
-  });
+//     Provide ONLY the alternative questions, separated by a newline. Do not include introductory text or numbering.
+//     Original question: {question}`
+//   });
 
-  // before the actual retrieval, generate multiple queries to retrieve more relevant documents
-  const multiQueryRetriever = MultiQueryRetriever.fromLLM({
-    llm: model, // Your Llama 3.1 instance
-    retriever: retriever, // maybe a hybrid retriever
-    // verbose: true,
-    prompt: CUSTOM_MULTI_QUERY_PROMPT,
-  });
+//   // before the actual retrieval, generate multiple queries to retrieve more relevant documents
+//   const multiQueryRetriever = MultiQueryRetriever.fromLLM({
+//     llm: model, // Your Llama 3.1 instance
+//     retriever: retriever, // maybe a hybrid retriever
+//     // verbose: true,
+//     prompt: CUSTOM_MULTI_QUERY_PROMPT,
+//   });
 
-  // 2. Create the RAG Prompt
-  // This tells the AI to ONLY use the provided context to answer.
-  const prompt = ChatPromptTemplate.fromMessages([
-    ["system", "You are a financial analyst. Use the following context to answer the user's question. If you don't know, say you don't know.\n\nContext:\n{context}"],
-    ["human", INPUT_KEY],
-  ]);
+//   // 2. Create the RAG Prompt
+//   // This tells the AI to ONLY use the provided context to answer.
+//   const prompt = ChatPromptTemplate.fromMessages([
+//     ["system", "You are a financial analyst. Use the following context to answer the user's question. If you don't know, say you don't know.\n\nContext:\n{context}"],
+//     ["human", INPUT_KEY],
+//   ]);
 
-  // 3. Create the "Stuff" Chain
-  // This step defines HOW the documents are formatted into the prompt.
-  const combineDocsChain = await createStuffDocumentsChain({
-    llm: model,
-    prompt
-  });
+//   // 3. Create the "Stuff" Chain
+//   // This step defines HOW the documents are formatted into the prompt.
+//   const combineDocsChain = await createStuffDocumentsChain({
+//     llm: model,
+//     prompt
+//   });
 
-  // 4. Create the final Retrieval Chain
-  // This connects your Hybrid Search logic to the Document Chain.
-  const retrieverChain = await createRetrievalChain({
-    retriever: multiQueryRetriever,
-    combineDocsChain,
-  });
+//   // 4. Create the final Retrieval Chain
+//   // This connects your Hybrid Search logic to the Document Chain.
+//   const retrieverChain = await createRetrievalChain({
+//     retriever: multiQueryRetriever,
+//     combineDocsChain,
+//   });
 
-  return retrieverChain;
-}
+//   return retrieverChain;
+// }
 
 // much more intuitive, no more black-box built-ins to use
 export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever | EnsembleRetriever) {
@@ -90,15 +89,15 @@ export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever 
   });
 
   // 2. create a multi query generator runnable
-  const queryGenPrompt = ChatPromptTemplate.fromTemplate(`
+  const multiQueryGenPrompt = ChatPromptTemplate.fromTemplate(`
     You are a Senior Equity Analyst. Generate 3 specific search queries to find exact 
-    numerical data in the Tesla Q4 2025 report for the question: "{${INPUT_KEY}}".
+    numerical data in the an earnings report for the question: "{${INPUT_KEY}}".
     Focus on technical terms like 'GAAP', 'Automotive Gross Margin', 'Free Cash Flow', 
     and 'EBITDA'. Output only the queries. Provide ONLY the queries, separated by a newline, no numbering, no preamble.
   `);
   // make sure to retain user's input as the input variable
   const queryGenerator = RunnableSequence.from([
-    queryGenPrompt,
+    multiQueryGenPrompt,
     model,
     new StringOutputParser(),
     RunnableLambda.from(async (output: string) => output.trim()),
@@ -139,6 +138,7 @@ export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever 
       2. **The "Z-Pattern" Awareness:** If a sentence seems to be interrupted by financial data or location names (e.g., "The margin improvedShanghaiModel YProduction"), ignore the interruptions and reconstruct the narrative. The interrupted data likely belongs to a table that was positioned to the right of the paragraph.
       3. **The Footnote Anchor:** Always check the end of a section for labels like "(1)", "(2)", or "Note:". These often contain critical context (e.g., "Excludes regulatory credits") that changes the meaning of the numbers.
       4. **The Scale Check:** Verify if the context specifies "($ in millions)" or "in thousands". Always include the unit in your final answer.
+      5. **The Source File Check:** Always check the source file name to identify the source of the context. It contains the company name and the year/quarter of the report.
 
       ### RESPONSE GUIDELINES
       - If the user asks for a specific metric (e.g., Gross Margin), look for the row that matches that exact term. 
