@@ -64,7 +64,8 @@ src/
   documentLoaders/
     directoryPDFLoader.ts            Recursive PDF directory loader
   messageStore/
-    createMemoryHistoryChain.ts      In-memory chat history wrapper
+    createMemoryHistoryChain.ts      Deprecated RunnableWithMessageHistory wrapper
+    messageStore.ts                  Custom in-memory message store and history callback
   models/
     llama-rag-chain.ts               Main RAG chain and prompts
     messageHistorySummarizer.ts      Chat history summarizer
