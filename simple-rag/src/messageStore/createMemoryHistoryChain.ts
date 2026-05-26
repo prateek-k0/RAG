@@ -5,6 +5,7 @@ import { INPUT_KEY, MESSAGE_HISTORY_KEY } from "../utils/constants";
 // in production, you would use a database to store the message history
 const messageStore = new Map<string, InMemoryChatMessageHistory>();
 
+// DEPRECATED: no more black-box built-ins like RunnableWithMessageHistory
 export function createMemoryHistoryChain(chain: RunnableSequence<any>) {
   return new RunnableWithMessageHistory({
     runnable: chain,

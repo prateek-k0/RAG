@@ -6,6 +6,8 @@ import { HybridRetriever } from "./searchers/hybrid.js";
 import { createLlamaRagChainWithRunnables } from "./models/llama-rag-chain.js";
 import ora from "ora";
 import { Runnable } from "@langchain/core/runnables";
+import { MessageHistoryCallbackHandler } from "./messageStore/messageStore.js";
+import { INPUT_KEY } from "./utils/constants.js";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,13 +16,14 @@ const rl = readline.createInterface({
 
 const spinner = ora();
 
-async function runner(chain: Runnable<any>, sessionId?: string) {
+async function runner(chain: Runnable<any>, config: any) {
   rl.question("Enter your prompt: ", async (promptInput) => {
     // 5. Run the RAG chain
     spinner.start("Thinking");
-    const resultStream = await chain.stream({
-      input: promptInput,
-    }, { configurable: { sessionId } });
+    const resultStream = await chain.stream(
+      { [INPUT_KEY]: promptInput },
+      config,
+    );
     spinner.succeed("Done thinking. Streaming response...");
     // 6. Stream the result
     // spinner.start("Streaming response...");
@@ -35,9 +38,11 @@ async function runner(chain: Runnable<any>, sessionId?: string) {
       }),
     );
     // spinner.succeed("Result streamed");
-    runner(chain, sessionId);
+    runner(chain, config);
   });
 }
+
+const sessionId = "session1";
 
 async function main() {
   try {
@@ -64,8 +69,11 @@ async function main() {
     spinner.start("Creating RAG chain... and finishing setup");
     const retrieverChain = await createLlamaRagChainWithRunnables(hybridRetriever);
     spinner.succeed("RAG setup complete");
-    rl.write('--------------------------\n');
-    await runner(retrieverChain, "session1");
+    rl.write("--------------------------\n");
+    await runner(retrieverChain, {
+      configurable: { sessionId },
+      callbacks: [new MessageHistoryCallbackHandler(sessionId)],
+    });
   } catch (error) {
     console.error("❌ Error:", error);
     spinner.fail("Error occurred");

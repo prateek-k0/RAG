@@ -1,11 +1,15 @@
 import { ChatOllama } from "@langchain/ollama";
-import { ChatPromptTemplate, MessagesPlaceholder, PromptTemplate } from "@langchain/core/prompts";
+import { 
+  ChatPromptTemplate,
+  MessagesPlaceholder,
+  // PromptTemplate
+} from "@langchain/core/prompts";
 // import { createStuffDocumentsChain } from "@langchain/classic/chains/combine_documents";
 // import { createRetrievalChain } from "@langchain/classic/chains/retrieval";
 // import { MultiQueryRetriever } from "@langchain/classic/retrievers/multi_query";
 import { BaseRetriever } from "@langchain/core/retrievers";
 import { EnsembleRetriever } from "@langchain/classic/retrievers/ensemble";
-import { INPUT_KEY, MESSAGE_HISTORY_KEY } from "../utils/constants";
+import { CONTEXT_KEY, INPUT_KEY, MESSAGE_HISTORY_KEY } from "../utils/constants";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { RunnableLambda, RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables";
 import { Document } from "@langchain/core/documents";
@@ -14,8 +18,12 @@ import { summarizeMessages } from "./messageHistorySummarizer";
 // import path from 'path';
 import 'dotenv/config';
 import { createMemoryHistoryChain } from "../messageStore/createMemoryHistoryChain";
+import { Message } from "@langchain/core/messages";
+import { MESSAGE_HISTORY_WATERMARK } from "../utils/constants";
+import { messageStoreService } from "../messageStore/messageStore";
 
 // DEPRECATED: no more black-box built-ins like MultiQueryRetriever
+/** 
 // export async function createLlamaRagChain(retriever: BaseRetriever | EnsembleRetriever) {
 //   // 1. Initialize our local Llama 3.1
 //   const model = new ChatOllama({
@@ -28,11 +36,11 @@ import { createMemoryHistoryChain } from "../messageStore/createMemoryHistoryCha
 
 //   // 1.5. Create the Multi Query Retriever
 //   // first, set prompt to generate different ways to ask the same thing
-//   /*
+//   
 //     the Standard Setup (and the one most likely to work with Llama 3.1 without errors) is to keep the 
 //     variable as {question} inside the MultiQueryRetriever template, while keeping your main chain 
 //     input as {input}.
-//   */
+//   
 //   const CUSTOM_MULTI_QUERY_PROMPT = new PromptTemplate({
 //     inputVariables: ["question"],
 //     template: `You are an AI language model assistant. Your task is to generate 
@@ -76,6 +84,7 @@ import { createMemoryHistoryChain } from "../messageStore/createMemoryHistoryCha
 
 //   return retrieverChain;
 // }
+*/
 
 // much more intuitive, no more black-box built-ins to use
 export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever | EnsembleRetriever) {
@@ -147,23 +156,32 @@ export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever 
       - If you don't know, say you don't know. Do not hallucinate numbers.
 
       ### CONTEXT:
-      {context}
+      {${CONTEXT_KEY}}
     `],
     new MessagesPlaceholder(MESSAGE_HISTORY_KEY), // IMPORTANT: this is where the message history will be injected
     ["human", `{${INPUT_KEY}}`],
   ]);
-  // TODO: use your own message store helpers (not the built-in RunnableWithMessageHistory)
+
   const ragChain = RunnableSequence.from([
-    // 1. assign the summarized message history to the input
+    // 1. assign the message history or to the input, summarizing if it's too long
     RunnablePassthrough.assign({
       [MESSAGE_HISTORY_KEY]: RunnableLambda.from(async (chainInput: any, chainConfig: any) => {
-        // console.log("🔍 Chain Config:", chainConfig);
-        return await summarizeMessages(chainInput[MESSAGE_HISTORY_KEY])
+        const sessionId = chainConfig.configurable.sessionId;
+        const messageHistory = sessionId ? messageStoreService.getMessageHistory(sessionId) : [];
+        if (messageHistory.length > MESSAGE_HISTORY_WATERMARK) {
+          // clear the message history and summarize it
+          console.log("🔍 Message History is too long, summarizing...");
+          messageStoreService.clearMessageHistory(sessionId)
+          const summarizedMessages = await summarizeMessages(messageHistory);
+          messageStoreService.addMessage(sessionId, summarizedMessages);
+          return [summarizedMessages];
+        }
+        return messageHistory;
       }) 
     }),
     // 2. assign the context to the input
     RunnablePassthrough.assign({
-      context: RunnableSequence.from([
+      [CONTEXT_KEY]: RunnableSequence.from([
         queryGenerator,
         retrieverChain,
         formatDocs,
@@ -172,9 +190,10 @@ export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever 
     // OR, we can use RunnableParallel to execute all the runnables (input, context and history ) in parallel
     // create multiple queries, and fetch chunks from the retriever, and format them, while letting the input pass through as is
     // RunnableParallel will automatically invoke all the runnables inside the object in parallel, and return the result as an object.
-    // When LangChain sees an object, it secretly wraps it in a RunnableParallel class.\
+    // When LangChain sees an object, it secretly wraps it in a RunnableParallel class.
+    // When LangChain sees a function, it secretly wraps it in a RunnableLambda class.
     // RunnableParallel.from({
-    //   context: RunnableSequence.from([
+    //   [CONTEXT_KEY]: RunnableSequence.from([
     //     queryGenerator,
     //     retrieverChain,
     //     formatDocs,
@@ -196,5 +215,6 @@ export async function createLlamaRagChainWithRunnables(retriever: BaseRetriever 
     new StringOutputParser()
   ]);
 
-  return createMemoryHistoryChain(ragChain);
+  // return createMemoryHistoryChain(ragChain);
+  return ragChain;
 }

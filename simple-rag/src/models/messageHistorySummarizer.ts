@@ -2,11 +2,7 @@ import { ChatOllama } from "@langchain/ollama";
 import { SystemMessage } from "@langchain/core/messages";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 
-export async function summarizeMessages(messageHistory: any[], waterMark: number = 5) {
-  if (!Array.isArray(messageHistory) || messageHistory.length < waterMark) {
-    return messageHistory;
-  }
-
+export async function summarizeMessages(messageHistory: any[]) {
   const summarizer = new ChatOllama({
     temperature: 0,
     repeatPenalty: 1.2,
@@ -25,17 +21,9 @@ export async function summarizeMessages(messageHistory: any[], waterMark: number
     ])
 
     const summaryText = response.trim();
-
-    if (!summaryText) {
-      console.warn("⚠️ Summary was empty. Keeping original history.");
-      return messageHistory;
-    }
-
-    console.log("✅ Summary Created:", summaryText);
-
-    return [new SystemMessage(`This is a summary of the conversation so far: ${summaryText}`)];
+    return new SystemMessage(`This is a summary of the conversation so far: ${summaryText}`);
   } catch (error) {
     console.error("❌ Summarization Error:", error);
-    return messageHistory;
+    return new SystemMessage(`Error summarizing messages: ${JSON.stringify(error)}`);
   }
 }
