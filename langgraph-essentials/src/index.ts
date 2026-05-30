@@ -1,0 +1,21 @@
+import { runGraph } from "./basic/0-text-transformer";
+import { runCaluclator } from "./basic/1-calculator-ops";
+import { runTriageRouter } from "./basic/2-triage-router";
+import { runValidationGraph } from "./basic/3-state-accumulation";
+import { runWeatherAgent } from "./intermediate/0-weather-app-tool";
+import { runWeatherAgentWorkflow } from "./intermediate/1-weather-app-custom-graph";
+import { runNodeStyleMiddleware } from "./intermediate/2-middlewares-node-hooks";
+import { runWrapStyleMiddleware } from "./intermediate/3-middlewares-wrap-hooks";
+import { runWeatherAgentWorkflowWithMiddlewares } from "./intermediate/4-middlewares-custom-graph";
+import { runSeriesGenerator } from "./intermediate/5-middleware-custom-graph-2";
+
+// runGraph();
+// runCaluclator();
+// runTriageRouter();
+// runValidationGraph();
+// runWeatherAgent();
+// runWeatherAgentWorkflow();
+// runNodeStyleMiddleware();
+// runWrapStyleMiddleware();
+// runWeatherAgentWorkflowWithMiddlewares();
+runSeriesGenerator();
