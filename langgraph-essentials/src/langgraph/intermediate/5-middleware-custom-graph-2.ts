@@ -69,6 +69,7 @@ const workflowGraph = new StateGraph(GraphState)
 
 workflowGraph
 // important to add ends, otherwise throws unreachable error
+// see how we have added the nodes themselves as end, as an example of self loops
 .addNode('a', withRedirectionMiddleware(nodeA), { ends: ['a', 'b', 'c', END] })
 .addNode('b', withRedirectionMiddleware(nodeB), { ends: ['a', 'b', 'c', END] })
 .addNode('c', withRedirectionMiddleware(nodeC), { ends: ['a', 'b', 'c', END] })
