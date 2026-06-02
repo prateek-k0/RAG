@@ -1,3 +1,22 @@
+/**
+ * MessagesState:
+ * LangGraph.js provides a pre-built schema called MessagesState. 
+ * It is an object containing a single messages key, which is an array of LangChain 
+ * BaseMessage objects (HumanMessage, AIMessage, ToolMessage).
+ * 
+ * it does 2 operations: 
+ * 1. Append: If you return a new message, it appends it to the history array.
+ * 2. Upsert/Overwrite by ID: If you return a message with an id that already exists in the state, 
+ *    the reducer overwrites the old message with the new one. This is the exact primitive used to 
+ *    support streaming token-by-token updates and message editing.
+ * 
+ * Tools:
+ * An LLM cannot call a database, fetch the weather, or execute code natively. It can only generate text. 
+ * A Tool is a structured wrapper around a standard JavaScript function that tells the LLM how and when 
+ * to request its execution.
+ * You define a tool using the tool() utility, giving it a name, a description, and a Zod schema for validation.
+ */
+
 import { StateGraph, MessagesAnnotation, START, END } from "@langchain/langgraph";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 import { ChatOllama } from "@langchain/ollama";
@@ -7,7 +26,7 @@ import { z } from "zod";
 import { AIMessage } from "@langchain/core/messages";
 
 /**
- * While createReactAgent / createAgent is incredibly clean, it hides the mechanics. 
+ * While createReactAgent / createAgent (from langchain) is incredibly clean, it hides the mechanics. 
  * To build Agentic RAG workflows later (where you need to grade documents or rewrite 
  * search terms before making a tool call), you must know how to build a custom agent 
  * loop using explicit graph mechanics.

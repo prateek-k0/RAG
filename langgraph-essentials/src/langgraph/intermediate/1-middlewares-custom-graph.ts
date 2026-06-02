@@ -1,9 +1,12 @@
 /**
- * For langgraph graphs (nodes and edges), to use middleware functionality,
+ * For langgraph (nodes and edges), to use middleware functionality,
  * We wrap the nodes with Higher Order Functions (HOF)
  * 
- * We can mutate the state by returning command objects,
- * also we can freely use "goto" to jump to other nodes
+ * To mutate state, we can either return a plain object or a Command object.
+ * If we return a command object, it alos allows us to jump to other nodes using the "goto" property.
+ * 
+ * messages manipulated by middleware are upserted/overwritten by ID (message id),
+ * instead of being appended blindly, so that no duplicate messages are added.
  * 
  * example: 
  * const node = async () => {...}
