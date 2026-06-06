@@ -9,7 +9,10 @@ import { runWrapStyleMiddleware } from "./langchain-agents/examples/2-middleware
 import { runWeatherAgentWorkflowWithMiddlewares } from "./langgraph/intermediate/1-middlewares-custom-graph";
 import { runSeriesGenerator } from "./langgraph/intermediate/2-middleware-custom-graph";
 import { runAgentWithThreadId } from "./langchain-agents/examples/3-short-term-memory";
-import { runWorkflowWithShortTermMemory } from "./langgraph/intermediate/3-short-term-memory";
+import { runWorkflowWithShortTermMemory } from "./langgraph/intermediate/3-short-term-memory-intro";
+import { runInterruptBefore } from "./langgraph/intermediate/6-interrupt-before";
+import { runWeatherAgentWorkflowWithInterruptCommand } from "./langgraph/intermediate/7-interrupt-command";
+import { runInterruptCommand2 } from "./langgraph/intermediate/8-interrupt-command-2";
 
 // runGraph();
 // runCaluclator();
@@ -22,4 +25,7 @@ import { runWorkflowWithShortTermMemory } from "./langgraph/intermediate/3-short
 // runWeatherAgentWorkflowWithMiddlewares();
 // runSeriesGenerator();
 // runAgentWithThreadId();
-runWorkflowWithShortTermMemory();
+// runWorkflowWithShortTermMemory();
+// runInterruptBefore();
+// runWeatherAgentWorkflowWithInterruptCommand();
+runInterruptCommand2();

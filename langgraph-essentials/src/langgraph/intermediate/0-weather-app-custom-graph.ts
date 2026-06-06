@@ -10,6 +10,17 @@
  *    the reducer overwrites the old message with the new one. This is the exact primitive used to 
  *    support streaming token-by-token updates and message editing.
  * 
+ * [IMPORTANT]: the reducer behind MessagesAnnotation is strictly an additive upsert engine. 
+ * It handles state updates using these exact matching rules:
+ * 1. If an incoming message has a new ID, it appends it to the array.
+ * 2. If an incoming message shares an existing ID with a message already in the state, 
+ *    it replaces that specific message in place.
+ * 3. If an existing message's ID is omitted entirely from the update payload, 
+ *    the reducer doesn't care—it leaves it completely untouched in the background state.
+ * 
+ * so to modify the messages array, we need to use RemoveMessage directive
+ * 
+ * 
  * Tools:
  * An LLM cannot call a database, fetch the weather, or execute code natively. It can only generate text. 
  * A Tool is a structured wrapper around a standard JavaScript function that tells the LLM how and when 

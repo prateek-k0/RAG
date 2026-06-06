@@ -42,7 +42,7 @@ const nodeC = async (state: typeof GraphState.State) => {
 }
 
 const withRedirectionMiddleware = (node: (state: typeof GraphState.State) => Promise<typeof GraphState.State>) => {
-  return async (state: typeof GraphState.State): Promise<Command> => {
+  return async (state: typeof GraphState.State): Promise<Command | Partial<typeof GraphState.State>> => {
     // if the sequence is less than 10, redirect to the next node
     if(state.sequence.length < 10) {
       const response = await node(state);

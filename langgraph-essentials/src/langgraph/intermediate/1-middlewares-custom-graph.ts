@@ -69,7 +69,7 @@ const callAgentNode = async (state: typeof MessagesAnnotation.State) => {
 }
 
 // 4. create a middleware to log the messages
-const withLoggerMiddleware = (nodeFunction: (state: typeof MessagesAnnotation.State) => Promise<Partial<typeof MessagesAnnotation.State> | Command>) => {
+const withLoggerMiddleware = (nodeFunction: (state: typeof MessagesAnnotation.State) => Promise<Command | Partial<typeof MessagesAnnotation.State>>) => {
   return async (state: typeof MessagesAnnotation.State) => {
     console.log('[Logger Middleware]')
     const response = await nodeFunction(state)
@@ -79,7 +79,7 @@ const withLoggerMiddleware = (nodeFunction: (state: typeof MessagesAnnotation.St
 
 // 4.1 middleware for agent_node to see if the response is a tool_call, and if so, redirect to the tool_node
 const withRedirectionMiddlewareForAgentNode = (agentNode: typeof callAgentNode) => {
-  return async (state: typeof MessagesAnnotation.State): Promise<Command> => {
+  return async (state: typeof MessagesAnnotation.State): Promise<Command | Partial<typeof MessagesAnnotation.State>> => {
     const response = await agentNode(state)
     const lastMessage = response.messages[response.messages.length - 1] as AIMessage;
     if(lastMessage.tool_calls && lastMessage.tool_calls.length > 0) {
@@ -112,7 +112,7 @@ const withRedirectionMiddlewareForAgentNode = (agentNode: typeof callAgentNode) 
 
 // 4.2 middleware to redirect for tool_call depending on the location argument for get_weather tool
 const withRedirectionMiddlewareForToolNode = (toolNode: typeof weatherToolNode) => {
-  return async (state: typeof MessagesAnnotation.State): Promise<Command> => {
+  return async (state: typeof MessagesAnnotation.State): Promise<Command | Partial<typeof MessagesAnnotation.State>> => {
     const lastMessage = state.messages[state.messages.length - 1] as AIMessage;
     const toolCall = lastMessage?.tool_calls?.[0];
     const toolName = toolCall?.name;
