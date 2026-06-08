@@ -6,7 +6,7 @@ import { runWeatherAgent } from "./langchain-agents/examples/0-weather-app-tool"
 import { runWeatherAgentWorkflow } from "./langgraph/intermediate/0-weather-app-custom-graph";
 import { runNodeStyleMiddleware } from "./langchain-agents/examples/1-middlewares-node-hooks";
 import { runWrapStyleMiddleware } from "./langchain-agents/examples/2-middlewares-wrap-hooks";
-import { runWeatherAgentWorkflowWithMiddlewares } from "./langgraph/intermediate/1-middlewares-custom-graph";
+import { runWeatherAgentWorkflowWithMiddlewares } from "./langgraph/intermediate/1-middleware-custom-graph";
 import { runSeriesGenerator } from "./langgraph/intermediate/2-middleware-custom-graph";
 import { runAgentWithThreadId } from "./langchain-agents/examples/3-short-term-memory";
 import { runWorkflowWithShortTermMemory } from "./langgraph/intermediate/3-short-term-memory-intro";
