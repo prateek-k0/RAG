@@ -21,7 +21,7 @@
 // for this example, lets look at a small llm based graph with short term memory retained.
 
 import { StateGraph, MessagesAnnotation, START, END, MemorySaver } from "@langchain/langgraph";
-import { AIMessage, HumanMessage } from "@langchain/core/messages";
+import { HumanMessage } from "@langchain/core/messages";
 import "dotenv/config";
 import { ChatOllama } from "@langchain/ollama";
 
